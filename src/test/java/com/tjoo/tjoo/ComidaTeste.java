@@ -24,4 +24,5 @@ public class ComidaTeste {
         assertFalse(comida.isVegano());
         assertEquals("Molho de tomate, mussarela, manjericão", comida.getIngredientes());
     }
+
 }

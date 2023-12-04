@@ -88,8 +88,6 @@ public class PedidoTeste {
     @Transactional
     @Rollback
     public void testeListarPedidos() {
-        // Limpeza do banco de dados ou anotações @Transactional e @Rollback
-
         Solicitante solicitante = new Solicitante("João", "123.456.789-00", "joao@gmail.com");
         solicitanteService.salvar(solicitante);
 
@@ -114,7 +112,6 @@ public class PedidoTeste {
 
         List<Pedido> pedidos = pedidoService.listarTodos();
 
-        // Acesse explicitamente os produtos para evitar problemas de lazy loading
         pedidos.forEach(pedido -> pedido.getProdutos().size());
 
         assertEquals(3, pedidos.size());
@@ -144,4 +141,5 @@ public class PedidoTeste {
 
         assertEquals(3, pedido.getProdutos().size());
     }
+
 }

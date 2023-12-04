@@ -3,7 +3,6 @@ package com.tjoo.tjoo.domain;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.ToString;
-
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -25,7 +24,5 @@ public abstract class Pedido {
     @ManyToOne
     @JoinColumn(name = "solicitante_id")
     protected Solicitante solicitante;
-
-    public abstract int contaProdutos();
 
 }
